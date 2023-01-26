@@ -1,0 +1,19 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+
+$theme-colors: (
+  "primary":    #003915,
+  "secondary":  #00363d,
+  "success":    #8CFF98,
+  "info":       #B1FFD1,
+  "warning":    #D0569F,
+  "danger":     #F9564F,
+  "light":      #E9E6FF,
+  "dark":       #1a1c19,
+  "muted":      #233425
+);
+
+@import "../bootstrap/scss/bootstrap";

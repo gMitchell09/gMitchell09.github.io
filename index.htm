@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>George Mitchell</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/custom_elements.js"></script>
+
+</head>
+
+<body class="bg-dark">
+  <!--
+  <div style="z-index:9999999; position: fixed; left:50px; top:70px;">
+    <button class="btn btn-secondary d-block d-sm-none">X-Small</button>
+    <button class="btn btn-secondary d-none d-sm-block d-md-none">Small</button>
+    <button class="btn btn-secondary d-none d-md-block d-lg-none">Medium</button>
+    <button class="btn btn-secondary d-none d-lg-block d-xl-none">Large</button>
+    <button class="btn btn-secondary d-none d-xl-block d-xxl-none">X-Large</button>
+    <button class="btn btn-secondary d-none d-xxl-block">XX-Large</button>
+  </div>-->
+  <nav class="navbar shadow sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Project Links
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!--
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>-->
+      </div>
+    </div>
+  </nav>
+
+  <div style="position: fixed; top: 0px; bottom: 0px; width: 100vw; height: 100vh; z-index: -10;">
+    <canvas id="bkgCanvas" width="2048" height="2048" style="width: 100%; height: 100%" class="bg-dark"></canvas>
+  </div>
+
+  <div class="container text-light" style="height:100vh">
+    <!--headline-region">-->
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col"></div>
+      <div class="col-lg-4 text-light d-flex justify-content-center">
+        <!-- profile pic -->
+        <img class="rounded" width="300px" height="500px" src="img/SimtechBooth.png" loading="lazy" /> <!-- "https://via.placeholder.com/300x500" -->
+      </div>
+      <div class="align-self-center col-lg-7 text-light">
+        <div class="row">
+          <h1>George Mitchell</h1>
+        </div>
+        <div class="row pb-2">
+          <hr />
+        </div>
+        <div class="row pb-4">
+          <h2><small class="text-muted">I am a computer engineer with over a decade of experience rapidly building
+              robust software.  I have built a strong reputation and career around leading lean teams developing high-quality software and hardware products with exceptionally tight deadlines.</small></h2>
+        </div>
+        <div class="row">
+          <a title="Github" href="https://www.github.com/gMitchell09" class="fa fa-github" data-bs-toggle="tooltip" data-bs-placement="bottom"></a>
+          <a title="LinkedIn" href="https://www.linkedin.com/in/georgepmitchell/" class="fa fa-linkedin" data-bs-toggle="tooltip" data-bs-placement="bottom"></a>
+          <a title="Stack Overflow" href="https://stackoverflow.com/users/2022405/george-mitchell" class="fa fa-stack-overflow" data-bs-toggle="tooltip"
+            data-bs-placement="bottom"></a>
+          <a title="Email" data-bs-toggle="modal" data-bs-target="#emailPopupModal" href="#" class="fa fa-at" data-bs-toggle="tooltip" data-bs-placement="bottom"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <div class="row text-light pb-4">
+      <h1>
+        <center><a name="about" class="section">Skills</a></center>
+      </h1>
+    </div>
+    <div class="row rounded py-4 px-4 mb-5 bg-light">
+      <div class="col-lg-4">
+        <div class="card border-dark">
+          <div class="card-body">
+            <h5 class="card-header">
+              Disciplines
+            </h5>  
+            <ul class="list-group">
+              <li class="list-group-item">Software Architecture Design</li>
+              <li class="list-group-item">RADAR Modeling</li>
+              <li class="list-group-item">INS Modeling</li>
+              <li class="list-group-item">Active, Semi-Active, Passive RF Modeling</li>
+              <li class="list-group-item">EOIR Modeling</li>
+              <li class="list-group-item">Entity Component System Design</li>
+              <li class="list-group-item">Circuit and PCB Design</li>
+              <li class="list-group-item">Embedded Security</li>
+              <li class="list-group-item">Android Development (Java, JNI, NDK, C++)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card border-dark">
+          <div class="card-body">
+            <h5 class="card-header">
+              Technologies
+            </h5>  
+            <ul class="list-group">
+              <li class="list-group-item">Modern C++</li>
+              <li class="list-group-item">Assembly (ARM, x64)</li>
+              <li class="list-group-item">EnTT</li>
+              <li class="list-group-item">ImGui</li>
+              <li class="list-group-item">OpenSceneGraph</li>
+              <li class="list-group-item">Python3</li>
+              <li class="list-group-item">Eigen</li>
+              <li class="list-group-item">ISAR</li>
+              <li class="list-group-item">OpenGL</li>
+              <li class="list-group-item">TPM</li>
+              <li class="list-group-item">Custom U-Boot for Secure Devices</li>
+              <li class="list-group-item">OpenGLES</li>
+              <li class="list-group-item">EGL</li>
+              <li class="list-group-item">Boost</li>
+              <li class="list-group-item">Pybind11</li>
+              <li class="list-group-item">SQL (MS Sql Server, MariaDB)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card border-dark">
+          <div class="card-body">
+            <h5 class="card-header">
+              Hardware
+            </h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">FLIR PTU-D300E</li>
+              <li class="list-group-item">Beaglebone Black</li>
+              <li class="list-group-item">Beagleboard X15</li>
+              <li class="list-group-item">ARM (Linux, bare metal)</li>
+              <li class="list-group-item">Atmel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class="row text-light pb-4">
+      <h1>
+        <center><a name="projects" class="section">Projects</a></center>
+      </h1>
+    </div>
+    <div class="rounded py-4 px-4 mb-5 bg-light">
+      <div class="row row-cols-md-4 row-cols-1 g-4 justify-content-center">
+        <div class="col"><a>
+            <div class="card project-card">
+              <a href="#"><img src="https://via.placeholder.com/300" class="card-img-top"></a>
+              <div class="card-body">
+                <h5 class="card-title">EGL Backend for ImGui</h5>
+                <p class="card-text">Developed an EGL NullWS backend for ImGui for rendering high-quality GUIs with SGX
+                  hardware acceleration on the BeagleBone Black</p>
+                <a href="#" class="btn btn-secondary text-light">Github</a>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card project-card">
+            <img src="https://via.placeholder.com/300" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Tricolor LED Controller PCB</h5>
+              <p class="card-text">Designed a PCB capable of powering and individually controlling 24 Tri-Color Common
+                Cathode LEDs (72 LEDs total). Hand-built a walnut and maple shadowbox which utilized this circuitry.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card">
+            <img src="https://via.placeholder.com/300" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Prototype Wah Guitar Pedal</h5>
+              <p class="card-text">Developed a prototype wah guitar pedal based on a combination of existing designs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card">
+            <img src="https://via.placeholder.com/300" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card Title</h5>
+              <p class="card-text">askdjfhaksldfjhalksdjhfakljsdhfklajsdhfk</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card">
+            <img src="https://via.placeholder.com/300" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card Title</h5>
+              <p class="card-text">askdjfhaksldfjhalksdjhfakljsdhfklajsdhfk</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card project-card">
+            <img src="https://via.placeholder.com/300" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Card Title</h5>
+              <p class="card-text">askdjfhaksldfjhalksdjhfakljsdhfklajsdhfk</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+    <div class="row text-light pb-4">
+      <h1>
+        <center><a name="experience" class="section">Experience</a></center>
+      </h1>
+    </div>
+    <div class="rounded py-4 px-4 mb-5 bg-light">
+      <div class="resume-area py-4 row justify-content-center">
+        <div class="resume-company-area col-md-2">
+          <div class="resume-company">
+            <h3>Simulation Technologies Inc. (SimTech)</h3>
+          </div>
+          <div class="resume-company-duration">
+            <h4><small class="text-muted">
+                <x-duration start="Oct 1 2012" end="" format="YYYYMMMM" />
+              </small></h4>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <ul class="resume">
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Senior Scientist (HPC RF Simulation)</h3>
+                <h5 class="resume-title-entry-duration"><small class="text-muted">June 2022 - Present</small>
+              </h4>
+              <div class="resume-title-description">
+                Developed a custom real-time ECS-based simulation engine and backprojected RF scatterer simulation with
+                CUDA and multithreaded switchable backends. Capable of processing a million scatterers in real-time in a
+                pulse-to-pulse RF simulation. Provides GIS capabilities for placing entities on a globe for
+                visualization and simulation. Cross-platform customizable engine built using ImGui, EnTT and
+                OpenSceneGraph.  Developed and integrated custom GLSL shaders into OSG rendering pipeline for visualizing dense point clouds.
+
+                Developed massively customizeable ECS utilities to minimize effort to add new Components to engine.
+                <br/><br/>
+                <div class="accordion" id="ewsgAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Prototype Simulation Screenshot
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#ewsgAccordion">
+                      <div class="accordion-body">
+                        <img data-bs-toggle="modal" data-bs-target="#imageEnlargeModal" data-id="ewsg_scrn" src="img/EWSG_screenshot.png" style="max-width: 100%; cursor: pointer;"/></div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++17</span>
+                <span class="resume-tag badge rounded-pill">Active RADAR Modeling</span>
+                <span class="resume-tag badge rounded-pill">Inertial Navigation System Modeling</span>
+                <span class="resume-tag badge rounded-pill">CUDA</span>
+                <span class="resume-tag badge rounded-pill">EnTT</span>
+                <span class="resume-tag badge rounded-pill">Entity-Component-System Design</span>
+                <span class="resume-tag badge rounded-pill">ImGui</span>
+                <span class="resume-tag badge rounded-pill">OpenSceneGraph</span>
+                <span class="resume-tag badge rounded-pill">GLSL</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Senior Scientist (Rapid Multi-Sensor Simulation Development)</h3>
+                <h5 class="resume-title-entry-duration"><small class="text-muted">April 2020 - Present</small>
+              </h4>
+              <div class="resume-title-description">
+                Developed a computationally efficient missile flight simulation to analyze the effectiveness of
+                customizable sensor package combinations. Sensors I developed simulation models for include Active and
+                Semi-Active RADAR (Ka, Ku and W bands), wide-band Passive RADAR, EOIR (NIR, MWIR, and LWIR), Semi-Active
+                LASER and various configurable Inertial Navigation Systems (INS). I implemented a rapidly configurable
+                UI framework for preparing batches of simulation runs. Parameters in the simulation can be locked to
+                fixed values or "Monte Carlo" to model uncertainties in specifications.
+              </div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">Python3</span>
+                <span class="resume-tag badge rounded-pill">Active/Semi-Active RADAR Modeling</span>
+                <span class="resume-tag badge rounded-pill">Passive RADAR Modeling</span>
+                <span class="resume-tag badge rounded-pill">Semi-Active LASER Modeling</span>
+                <span class="resume-tag badge rounded-pill">EOIR Modeling</span>
+                <span class="resume-tag badge rounded-pill">Inertial Navigation System Modeling</span>
+                <span class="resume-tag badge rounded-pill">Monte Carlo Simulation</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Senior Scientist (ISAR RADAR Algorithm Optimization)</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">October 2019 - Present</small></h5>
+              <div class="resume-title-description">Optimized existing RADAR ISAR processing algorithms to reduce
+                runtime by a factor of over 100x (reduced runtimes of hours to runtimes measured in seconds) by
+                translating "hot" regions of code from Python into modern C++ utilizing Pybind11 and Eigen for
+                developing the binding between the existing Python software and new, highly optimized C++ processing
+                algorithms. Technologies used: Python3, C++14, Pybind11, Eigen. This task helped me to further my
+                knowledge and understanding of state-of-the-art RADAR algorithm design alongside understanding the
+                effects of and how to mitigate real-world data collection errors.</div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++14</span>
+                <span class="resume-tag badge rounded-pill">Python3</span>
+                <span class="resume-tag badge rounded-pill">Pybind11</span>
+                <span class="resume-tag badge rounded-pill">Eigen</span>
+                <span class="resume-tag badge rounded-pill">ISAR Algorithms</span>
+                <span class="resume-tag badge rounded-pill">RADAR Principles</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Embedded System Developer (Portable JAGM Reprogrammer)</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">May 2019 - Present</small></h5>
+              <div class="resume-title-description">Designed and built a portable reprogrammer for live missile rounds using the Beaglebone platform (ARM AM3358). 
+                Implemented custom EGL backend for ImGui (Immediate-mode GUI library) to utilize hardware acceleration (SGX Graphics Processor) on the Beaglebone Black. 
+                Without hardware acceleration the baseline UI could only achieve 6fps (system CPU frequency is only 800MHz); after I compiled the OpenGLES+EGL drivers and 
+                implemented an EGL backend the system was able to maintain a redraw rate of 60hz even under heavy CPU load.  
+                For communication with the target system I developed a high-speed communication interface using the PRUs (programmable real-time units) built into the AM3358 processors.  
+                PRUs are RISC co-processors that run real-time processes at 200MHz with an exceptionally small instruction set.  
+                This enabled the system to maximize throughput through the RS485 communication lines which helped reduce the time required for fully reprogramming the rounds.  
+                Intensive safety and security considerations designed into solution. This system had to be vetted and accredited for both safety and cybersecurity.  
+                I applied the NIST 800-53 security controls to the system through the relevant STIGs, documented all aspects of the system's lifecycle as a series of SOPs 
+                (e.g. Auditing and Accountability procedures, Configuration Management, Identification and Authentication, Maintenance, etc…) for compliance and application for an ATO (authority to operate).  
+                I developed a custom initrd image for decrypting the onboard storage with a user-provided PIN via a touchscreen.  
+                Due to how early in the boot process this occurs I had to write a custom application for rendering the input dialog via the low-level graphics framebuffer interface.  
+                LUKS full disk encryption was used with a TPM for full-disk encryption for ensuring protection of the data while at rest.  
+                To support decrypting with a TPM on boot I customized the bootloader (U-Boot) to feed the boot sequence information into the TPM to unlock the decryption keys.</div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++17</span>
+                <span class="resume-tag badge rounded-pill">Beaglebone Black</span>
+                <span class="resume-tag badge rounded-pill">Custom PCB Design</span>
+                <span class="resume-tag badge rounded-pill">TPM</span>
+                <span class="resume-tag badge rounded-pill">LUKS</span>
+                <span class="resume-tag badge rounded-pill">ImGui</span>
+                <span class="resume-tag badge rounded-pill">OpenGLES 2.0</span>
+                <span class="resume-tag badge rounded-pill">EGL</span>
+                <span class="resume-tag badge rounded-pill">NIST 800-53</span>
+                <span class="resume-tag badge rounded-pill">STIG</span>
+                <span class="resume-tag badge rounded-pill">ACAS</span>
+                <span class="resume-tag badge rounded-pill">Nessus</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Embdedded System Developer (RAPTR)</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">January 2017 - Present</small></h5>
+              <div class="resume-title-description">Developed a fully autonomous, high-precision camera positioning and
+                stabilization system utilizing a Beaglebone Black, FLIR PTU-D300E, Phantom High Speed Cameras, and a
+                custom designed IO PCB. Usable in maritime environments for tracking targets with high-speed cameras for
+                video recording of test events. Also used for ground-based tracking of UAVs. </div>
+
+                <br/><br/>
+                <div class="accordion" id="raptrAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="raptrHeader">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRAPTR" aria-expanded="false" aria-controls="collapseRAPTR">
+                        RAPTR Maritime Integration
+                      </button>
+                    </h2>
+                    <div id="collapseRAPTR" class="accordion-collapse collapse" aria-labelledby="raptrHeader" data-bs-parent="#raptrAccordion">
+                      <div class="accordion-body">
+                        <img data-bs-toggle="modal" data-bs-target="#imageEnlargeModal" data-id="hud_scrn" src="img/RAPTRIntegration.jpg" style="max-width: 100%; cursor: pointer;"/></div>
+                      </div>
+                    </div>
+                </div>
+                
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++17</span>
+                <span class="resume-tag badge rounded-pill">Beaglebone Black</span>
+                <span class="resume-tag badge rounded-pill">Beagleboard X15</span>
+                <span class="resume-tag badge rounded-pill">FLIR PTU D300E</span>
+                <span class="resume-tag badge rounded-pill">Photron High Speed Cameras</span>
+                <span class="resume-tag badge rounded-pill">Detection and Tracking Algorithms</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Emedded System Developer (JAGM HUD)</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">November 2016 - October 2019</small>
+              </h5>
+              <div class="resume-title-description">
+                Built and maintained HUD for Captive Flight Test data collection events for use by pilots to optimize
+                data collection.
+                This system is split into 3 individual parts: an Android tablet that provides real-time in-flight data
+                to the pilots, a tablet for the flight crew and sensor operators to monitor sensor status and set the
+                moding for the pilot tablet and a data aggregation/parsing server.
+                The server was developed on a Beaglebone Black and it's responsibility is to receive and parse the
+                sensor data alongside INS and target GPS data and use this information to communicate optimal flight
+                trajectories to the pilots.</div>
+
+                <br/><br/>
+                <div class="accordion" id="hudAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        HUD Integration Flight
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#hudAccordion">
+                      <div class="accordion-body">
+                        <img data-bs-toggle="modal" data-bs-target="#imageEnlargeModal" data-id="hud_scrn" src="img/HUDIntegration.jpg" style="max-width: 100%; cursor: pointer;"/></div>
+                      </div>
+                    </div>
+                </div>
+
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++14</span>
+                <span class="resume-tag badge rounded-pill">Beaglebone Black</span>
+                <span class="resume-tag badge rounded-pill">Boost</span>
+                <span class="resume-tag badge rounded-pill">INS</span>
+                <span class="resume-tag badge rounded-pill">Android App Development</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Lead Desktop Application Developer (MIDAS)</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">August 2016 - October 2019</small></h5>
+              <div class="resume-title-description">Responsible for developing a fast and robust data collection and
+                real-time analysis tool for telemetry data. Technologies used: C++11, Boost, Python, MariaDB, pybind11,
+                Qt5. Built a system capable of handling high-throughput data streams with a data format known only at
+                runtime that is able to be used for both field data collection and post-processing data analysis. Soft
+                real-time high rate data processing, storage, display and visualization using run-time metadata formats.
+                Real-world data collection and analysis. Mobile application development support and ad-hoc network
+                utilization.</div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++14</span>
+                <span class="resume-tag badge rounded-pill">Python3</span>
+                <span class="resume-tag badge rounded-pill">Pybind11</span>
+                <span class="resume-tag badge rounded-pill">Eigen</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Web Application Development Lead</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">July 2014 - August 2016</small></h5>
+              <div class="resume-title-description">Responsible for leading development of the AMCOM Express Contracting
+                System which handles the tracking of packages through the AMCOM Express contracting vehicle.
+                Technologies utilized include C#.NET and Entity Framework alongside a SQL Server database and Twitter
+                Bootstrap + jQuery for the user interface. Ensured that code met IA guidelines and performed a static
+                code analysis using the "HP Fortify" static software analysis tool. Lead and coordinated a team of 5
+                engineers and completed this task quickly, efficiently and produced an end-product that is easily
+                extensible and robust. My main development responsibility on this task was to design the entire
+                business-logic and data interface layers utilizing Entity Framework to provide a stable and secure
+                implementation.</div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C#.net</span>
+                <span class="resume-tag badge rounded-pill">Entity Framework</span>
+                <span class="resume-tag badge rounded-pill">MS Sql Server</span>
+                <span class="resume-tag badge rounded-pill">Bootstrap 4</span>
+                <span class="resume-tag badge rounded-pill">JQuery</span>
+                <span class="resume-tag badge rounded-pill">Fortify Static Analysis</span>
+              </div>
+            </li>
+            <li class="resume-entry">
+              <h4 class="resume-title-entry">Mobile Application Developer</h4>
+              <h5 class="resume-title-entry-duration"><small class="text-muted">October 2012 - July 2014</small></h5>
+              <div class="resume-title-description">Worked full-time developing multiple products for several groups
+                ranging from data collection and analysis to image processing. Main focus is on streamlining tasks that
+                are currently done manually by integrating mobile devices into the current workflow and minimizing labor
+                intensive tasks by introducing custom built embedded systems utilizing cutting edge technologies to
+                streamline data collection and analysis. Examples of devices that I've built as the sole developer are a
+                distance-measuring sensor utilizing ultrasonic rangefinders which communicates via Bluetooth to an
+                Android tablet for data recording and analysis. Another project that I've designed and developed is a
+                thermal imaging camera which utilizes an IR thermopile array and a Bluetooth 4.0 Low Energy board to
+                communicate temperature data back to an iOS device for instant viewing through a custom app. Integrated
+                OpenSceneGraph in a custom mobile app to further aid in the collection and analysis of data.</div>
+              <div class="resume-entry-tags">
+                <span class="resume-tag badge rounded-pill">C++11</span>
+                <span class="resume-tag badge rounded-pill">Java</span>
+                <span class="resume-tag badge rounded-pill">Android SDK</span>
+                <span class="resume-tag badge rounded-pill">Android NDK</span>
+                <span class="resume-tag badge rounded-pill">OpenSceneGraph</span>
+                <span class="resume-tag badge rounded-pill">OpenCV</span>
+                <span class="resume-tag badge rounded-pill">Ultrasonic Sensor Algorithm Development</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row text-light pb-4">
+      <h1>
+        <center><a name="contact" class="section">Contact Me</a></center>
+      </h1>
+    </div>
+    <div class="rounded py-4 px-4 mb-5 bg-light">
+      <center>
+        <a class="btn btn-outline-primary" title="Email" data-bs-toggle="modal" data-bs-target="#emailPopupModal" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom">Email</a>
+        <a class="btn btn-outline-primary" title="Linkedin" href="https://www.linkedin.com/in/georgepmitchell/" data-bs-toggle="tooltip" data-bs-placement="bottom">Linkedin</a>
+      </center>
+      <!--
+      <form>
+        <input class="form-control my-2" type="text" id="name" placeholder="Name"></input>
+        <input class="form-control my-2" type="email" id="email_addr" placeholder="Email Address"></input>
+        <textarea class="form-control my-2" rows="5" id="message" placeholder="Message"></textarea>
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </form>-->
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="modal fade" id="imageEnlargeModal" tabindex="-1" aria-labelledby="imageEnlargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img id="modal-img" style="display:block; margin-left: auto; margin-right: auto; max-width: 100%"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="emailPopupModal" tabindex="-1" aria-labelledby="emailPopupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Email Me!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <a class="btn btn-outline-primary" id="emailAddressLink" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+          title="Copy to Clipboard">Beep Boop I am an Email Address</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="js/fft.js"></script>
+
+  <script type="text/javascript"> 
+    function fallbackCopyTextToClipboard(text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      
+      // Avoid scrolling to bottom
+      textArea.style.top = "0";
+      textArea.style.left = "0";
+      textArea.style.position = "fixed";
+
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+      }
+
+      document.body.removeChild(textArea);
+    }
+    function copyTextToClipboard(text) {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+    }
+
+    var emailTooltip = new bootstrap.Tooltip(document.getElementById("emailAddressLink"));
+    /*var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })*/
+
+    function rotN(sz, n, fwd) {
+      const boring = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@:.0123456789';
+      if (!fwd) n = boring.length - n;
+      const rotated = boring.slice(n) + boring.slice(0, n);
+      let regex = new RegExp("[" + boring + "]", 'g');
+      return sz.replace(regex, letter => boring[rotated.indexOf(letter)]);
+    }
+
+    var imageEnlargeModal = document.getElementById('imageEnlargeModal')
+    imageEnlargeModal.addEventListener('show.bs.modal', function (event) {
+      var imgEvent = event.relatedTarget;
+      var imgSrc = imgEvent.getAttribute('src');
+
+      var modalTitle = imageEnlargeModal.querySelector('.modal-title');
+      var modalImg = imageEnlargeModal.querySelector(".modal-body img");
+
+      modalImg.src = imgSrc;
+      imageEnlargeModal.handleUpdate();
+    });
+
+    var emailModal = document.getElementById("emailPopupModal");
+    emailModal.addEventListener('show.bs.modal', function (event) {
+      var emailLink = emailModal.querySelector('#emailAddressLink');
+      let protectedEmail = rotN("KISVKItQMXGLIPPDvrKQEMPtGSQ", 35, false);
+      emailLink.innerText = protectedEmail;
+      //emailLink.href = "mailto:" + protectedEmail;
+    });
+
+    var emailCopyLink = document.getElementById("emailAddressLink");
+    emailCopyLink.addEventListener('click', function() {
+      copyTextToClipboard(emailCopyLink.innerText);
+      emailTooltip.title = "Copied!";
+      emailTooltip.hide();
+      emailTooltip.show();
+    });
+  </script>
+  <!--<script src="js/background.js"></script>-->
+</body>
+
+</html>
